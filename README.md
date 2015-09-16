@@ -2,7 +2,7 @@
 Unofficial Plugin which enables you to build Unity applications for Android with Myo support.
 ## Directory structure and Setup
 You need to add both folders to your Unity projects Assets folder.
-I tested the plugin with Unity 5.1.2 and a Galaxy Note 4. Although I used Myo Android SDK 0.10.0 and Myo Softwareversiono 1.0.0 to build the project.
+I tested the plugin with Unity 5.1.2 and a Galaxy Note 4. Although I used Myo Android SDK 0.10.0 and Myo Softwareversion 1.0.0 to build the project. The "AndroidPlugin" itself is build as an "Android Bound Service" so it is mentioned in the Manifest file but not as the Main-Application. This should enable you to use a second Plugin more easily.
 
 ```
 \Assets
