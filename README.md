@@ -1,8 +1,8 @@
 # MyoUnityAndroidPlugin
-Unofficial Plugin which enables you to build Unity applications for Android with Myo support.
+Unofficial plugin which enables you to build Unity applications for Android with Myo support.
 ## Directory structure and Setup
 You need to add both folders to your Unity projects Assets folder.
-I tested the plugin with Unity 5.1.2 and a Galaxy Note 4. Although I used Myo Android SDK 0.10.0 and Myo Softwareversion 1.0.0 to build the project. The "AndroidPlugin" itself is build as an "Android Bound Service" so it is mentioned in the Manifest file but not as the Main-Application. This should enable you to use a second Plugin more easily.
+I tested the plugin with Unity 5.1.2 and a Galaxy Note 4. Although I used Myo Android SDK 0.10.0 and Myo software version 1.0.0 to build the project. The "AndroidPlugin" itself is build as an "Android Bound Service" so it is mentioned in the Manifest file but not as the main-application. This should enable you to use a second plugin more easily.
 
 ```
 \Assets
@@ -30,19 +30,19 @@ I tested the plugin with Unity 5.1.2 and a Galaxy Note 4. Although I used Myo An
 
 1. Import MyoPlugin and Plugins folder into your Unity project.
 2. Open "MyoPlugin/Demo/Scenes/MyoDemoScene.unity".
-3. In your Build Settings switch your plattform to Android.
+3. In your Build Settings switch your platform to Android.
 4. In Player Settings you have to set your Bundle Identifier
-5. Also set Minimum API Level 18 (Android 4.3 'Jelly Bean'). Everything else in Player Settings should be optional.
+5. Also set minimum API Level 18 (Android 4.3 'Jelly Bean'). Everything else in Player Settings should be optional.
 6. Now you should be able to build and deploy to your Android device.
 
 ## Using the Demo
 
-1. First you must pair your Myo device. Press the "AttachToAdjacent" button then 'bump' Myo gently to your device. Note: Currently no other Attach mehtod is implemented, see "Known Issues".
-2. You should immediately gain control of the Cube's rotation. Poses and Orientation will be displayed as well. You can use Myo vibration, Uninitialize the Plugin and Initialize it again using the buttons.
+1. First you must pair your Myo device. Press the "AttachToAdjacent" button then 'bump' Myo gently to your device. Note: Currently no other attach method is implemented, see "Known Issues".
+2. You should immediately gain control of the cube's rotation. Poses and Orientation will be displayed as well. You can use Myo vibration, uninitialize the plugin and initialize it again using the buttons.
 
 ## The API
 
-When you build your own scene, you simply need to have a GameObject thats called "MyoManager" with the MyoManger script attached to it. For "out of the box" use there is also an Prefab included which you can drag into your scene. You now can start the Plugin via "MyoManager.Initialize", the other methods are called in the same manner. The code below represents the methods which can be called using the MyoManger.
+When you build your own scene, you simply need to have a GameObject thats called "MyoManager" with the MyoManger script attached to it. For an out of the box solution, there is also a prefab included which you can drag into your scene. You now can start the plugin via "MyoManager.Initialize", the other methods are called in the same manner. The code below represents the methods which can be called using the MyoManger.
 
 ```C#
 
@@ -68,13 +68,13 @@ public class MyoManager : MonoBehaviour
     /// Gets the rotation of the Myo device, converted into Unity's coordinate system (See MyoToUnity).
     public static Quaternion GetQuaternion()
 
-    //Vibrates the Myo device for the specified length, Short, Medium, or Long.
+    /// Vibrates the Myo device for the specified length, Short, Medium, or Long.
     public static void VibrateForLength( MyoVibrateLength length );
     
-    //Tells you if the plugin is already Initialized
+    /// Tells you if the plugin is already initialized
     public static bool GetIsInitialized(){
     
-    //Tells you if a Myo is already attached to the Device Hub
+    /// Tells you if a Myo is already attached to the device
   	public static bool GetIsAttached()
 }
 
@@ -83,7 +83,7 @@ public class MyoManager : MonoBehaviour
 ## Known Issues
 
 - Only 'attachToAdjacent' method for connecting the Myo is working right now. You have to 'bump' your Myo gently against your Android device. The usual option to choose a myo from a screen isnt implemented yet.
-- Currently you can only use one Myo. If I can get my hands on a second one i will implement this functionality too.
+- Currently you can only use one Myo per device. If I can get my hands on a second one i will implement this functionality too.
 
 ## Support
 
