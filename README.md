@@ -2,7 +2,7 @@
 Unofficial plugin which enables you to build Unity applications for Android with Myo support.
 ## Directory structure and Setup
 You need to add both folders to your Unity projects Assets folder.
-I tested the plugin with Unity 5.1.2 and a Galaxy Note 4. Although I used Myo Android SDK 0.10.0 and Myo software version 1.0.0 to build the project. The "AndroidPlugin" itself is build as an "Android Bound Service" so it is mentioned in the Manifest file but not as the main-application. This should enable you to use a second plugin more easily.
+I tested the plugin with Unity 5.1.2 and a Galaxy Note 4. Although I used Myo Android SDK 0.10.0 and Myo software version 1.0.0 to build the project. The "AndroidPlugin" itself is built as an "Android Bound Service" so it is mentioned in the Manifest file but not as the main-application. This should enable you to use a second plugin more easily.
 
 ```
 \Assets
@@ -82,12 +82,12 @@ public class MyoManager : MonoBehaviour
 
 ## Known Issues
 
-- Only 'attachToAdjacent' method for connecting the Myo is working right now. You have to 'bump' your Myo gently against your Android device. The usual option to choose a myo from a screen isnt implemented yet.
+- Only 'attachToAdjacent' method for connecting the Myo is working right now. You have to 'bump' your Myo gently against your Android device. The usual option to choose a myo from a screen isn't implemented yet.
 - Currently you can only use one Myo per device. If I can get my hands on a second one i will implement this functionality too.
 
 ## Support
 
-This project was kind of rushed, so if you have any feedback just contact me (Florian.Strieg@Student.Reutlingen-University.DE). Although i cant guarantee any direct support I'm looking forward to develop this plugin a bit further.
+This project was kind of rushed, so if you have any feedback just contact me (Florian.Strieg@Student.Reutlingen-University.DE). Although i cannot guarantee any direct support I'm looking forward to develop this plugin a bit further.
 
 ## Thanks
 
